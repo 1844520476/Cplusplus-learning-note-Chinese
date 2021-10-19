@@ -1,4 +1,4 @@
-# C-learning-note-Chinese-
+# C++ learning note(Chinese)
 这是一位C++编程语言初学者的学习笔记（注释即为笔记）。
 This is a learning note for a beginner of C + + programming language (notes are notes).
 同时，我通过不断地上传改进学习git的使用。
