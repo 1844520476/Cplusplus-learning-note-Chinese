@@ -13,9 +13,9 @@ int &test_1()
 
 int &test_2()
 {
-    static int a = 10; //全局变量由系统释放。不会因为test_2执行完数据被清除
-    cout << "(test_2)a=" << a << endl;
-    return a;
+    static int a_2 = 10; //全局变量由系统释放。不会因为test_2执行完数据被清除
+    cout << "(test_2)a=" << a_2 << endl;
+    return a_2;
 }
 int main()
 {
@@ -32,7 +32,7 @@ int main()
 
     test_2() = 1000;                 //若函数返回值是引用，此函数可作为左值
     cout << "ref2=" << ref2 << endl; // ref2已经是a的别名
-    // cout << "ref2=" << a << endl;//error
+    // cout << "a_2=" << a_2 << endl;//error
 
     system("pause");
     return 0;

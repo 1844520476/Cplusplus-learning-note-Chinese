@@ -19,7 +19,7 @@ struct Addressbooks //Í¨Ñ¶Â¼½á¹¹Ìå(abs)
 };
 
 // 1.Ìí¼ÓÁªÏµÈË
-void addPerson(Addressbooks* abs)
+void addPerson(Addressbooks *abs)
 {
     if (abs->m_Size == MAX)
     {
@@ -37,8 +37,8 @@ void addPerson(Addressbooks* abs)
         while (1)
         {
             cout << "ÇëÊäÈë(Êı×Ö)ĞÔ±ğ:"
-                << "1-male\n"
-                << "0-female" << endl;
+                 << "1-male\n"
+                 << "0-female" << endl;
             int gender = 0;
             cin >> gender;
             if (gender == 1 || gender == 0)
@@ -77,7 +77,7 @@ void addPerson(Addressbooks* abs)
 }
 
 // 2.ÏÔÊ¾ÁªÏµÈË(ËùÓĞÈË)
-void showPerson(Addressbooks* abs)
+void showPerson(Addressbooks *abs)
 {
     if (abs->m_Size == 0)
     {
@@ -109,7 +109,7 @@ void showPerson(Addressbooks* abs)
             cout << "\tphone:" << abs->personArray[i].m_Phone << endl;
             //µØÖ·
             cout << "\taddress:" << abs->personArray[i].m_Addr << "\n"
-                << endl; //\tË®Æ½ÖÆ±í·û
+                 << endl; //\tË®Æ½ÖÆ±í·û
         }
     }
     system("pause");
@@ -118,7 +118,7 @@ void showPerson(Addressbooks* abs)
 }
 
 // 3.1¼ì²âÁªÏµÈËÊÇ·ñ´æÔÚ¡£Èô´æÔÚ£¬·µ»ØÁªÏµÈËºÍ¾ßÌåÎ»ÖÃ£¨ÏÂ±ê£©£»Èô²»´æÔÚ£¬·µ»Ø-1
-int isExist(Addressbooks* abs, string name) //²ÎÊı1£¬µÃ´«ÈëÒ»¸öÍ¨Ñ¶Â¼£»²ÎÊı2.²éÕÒ¶ÔÏóĞÕÃû
+int isExist(Addressbooks *abs, string name) //²ÎÊı1£¬µÃ´«ÈëÒ»¸öÍ¨Ñ¶Â¼£»²ÎÊı2.²éÕÒ¶ÔÏóĞÕÃû
 {
     for (int i = 0; i < abs->m_Size; i++)
     {
@@ -132,7 +132,7 @@ int isExist(Addressbooks* abs, string name) //²ÎÊı1£¬µÃ´«ÈëÒ»¸öÍ¨Ñ¶Â¼£»²ÎÊı2.²éÕ
 }
 
 // 3.2É¾³ıÁªÏµÈË
-void deletePerson(Addressbooks* abs)
+void deletePerson(Addressbooks *abs)
 {
     cout << "ÇëÊäÈëÄãÏëÉ¾³ıµÄÁªÏµÈËĞÕÃû:" << endl;
     string name;
@@ -159,7 +159,7 @@ void deletePerson(Addressbooks* abs)
 }
 
 // 4.²éÕÒÁªÏµÈË(Ä³¸öÈË)
-void findPerson(Addressbooks* abs)
+void findPerson(Addressbooks *abs)
 {
     cout << "ÇëÊäÈëÄãÒª²éÕÒµÄÁªÏµÈË" << endl;
     string name;
@@ -182,7 +182,7 @@ void findPerson(Addressbooks* abs)
 }
 
 // 5.ĞŞ¸ÄÁªÏµÈË
-void modifyPerson(Addressbooks* abs)
+void modifyPerson(Addressbooks *abs)
 {
     cout << "ÇëÊäÈëÏëĞŞ¸ÄµÄÁªÏµÈËĞÕÃû" << endl;
     string name;
@@ -204,8 +204,8 @@ void modifyPerson(Addressbooks* abs)
         while (1)
         {
             cout << "ÇëÊäÈëĞÔ±ğ:"
-                << "1-male\n"
-                << "0-female" << endl;
+                 << "1-male\n"
+                 << "0-female" << endl;
             int gender = 0;
             cin >> gender;
             if (gender == 1 || gender == 0)
@@ -242,12 +242,12 @@ void modifyPerson(Addressbooks* abs)
 }
 
 // 6.Çå¿ÕÁªÏµÈË
-void emptyPerson(Addressbooks* abs)
+void emptyPerson(Addressbooks *abs)
 {
     cout << "ÇëÊäÈë1ÒÔÈ·ÈÏÉ¾³ıÈ«²¿ÁªÏµÈË" << endl;
     int redf = 0;
     cin >> redf;
-    if (redf != 1)//CÓïÑÔÖĞ²»µÈÓÚ£º!=,µÈÓÚ£º==
+    if (redf != 1) // CÓïÑÔÖĞ²»µÈÓÚ£º!=,µÈÓÚ£º==
     {
         return;
     }
