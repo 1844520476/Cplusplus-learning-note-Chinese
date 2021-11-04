@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
-//ç‚¹åœ†å…³ç³»
+//µãÔ²¹ØÏµ
 
-class Point //ç‚¹ç±»
+class Point //µãÀà
 {
     double m_x;
     double m_y;
@@ -27,7 +27,7 @@ public:
     }
 };
 
-class Circle //åœ†ç±»
+class Circle //Ô²Àà
 {
     int m_R;
     Point m_Center;
@@ -42,19 +42,19 @@ public:
     {
         return m_R;
     }
-    void SetCenter(Point center) //è·å–åœ†å¿ƒ
+    void SetCenter(Point center) //»ñÈ¡Ô²ĞÄ
     {
         m_Center = center;
     }
-    Point GetCenter() //æ³¨æ„æ­¤å¤„è¿”å›ç±»å‹ä¸ºPoint
+    Point GetCenter() //×¢Òâ´Ë´¦·µ»ØÀàĞÍÎªPoint
     {
         return m_Center;
     }
 };
 
-void IsInCircle(Circle &c, Point &p) //ï¼ˆå¼•ç”¨å½¢å¼ï¼‰
+void IsInCircle(Circle &c, Point &p) //£¨ÒıÓÃĞÎÊ½£©
 {
-    double x = c.GetCenter().GetX() - p.GetX(); //å¥½å¥½çœ‹çœ‹
+    double x = c.GetCenter().GetX() - p.GetX(); //ºÃºÃ¿´¿´
     double y = c.GetCenter().GetY() - p.GetY();
     double dis = x * x + y * y;
     double Rdis = c.GetR() * c.GetR();
@@ -75,7 +75,7 @@ void IsInCircle(Circle &c, Point &p) //ï¼ˆå¼•ç”¨å½¢å¼ï¼‰
 int main()
 {
     Circle c1;
-    Point center1; //åˆ›å»ºåœ†
+    Point center1; //´´½¨Ô²
     c1.SetR();
     cout << "Please input circle center" << endl;
     double X, Y;
